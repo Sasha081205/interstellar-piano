@@ -2,7 +2,7 @@
 
 A multi-microcontroller hardware synthesizer combining an **Arduino Mega 2560** and an **ESP32-S3**. It allows users to play notes, complex chords, and full pre-programmed melodies (including Hans Zimmer's *Cornfield Chase*) through both a physical keypad and a remote web dashboard.
 
-🌐 **[View the Project Portfolio Page](https://sasha081205.github.io/interstellar-piano/)** 
+🌐 **[View the Project Portfolio Page](https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPO_NAME/)** *(Remember to update this link)*
 
 ## 🚀 Features
 * **Dual Interface**: Play via physical 4x4 matrix keypad or through the responsive HTTP dashboard.
@@ -18,6 +18,18 @@ A multi-microcontroller hardware synthesizer combining an **Arduino Mega 2560** 
 * Passive Buzzer
 * 8x LEDs & 8x 220Ω Resistors
 * Jumper wires & Breadboard
+
+## 📚 Software & Libraries Required
+To compile the code in the Arduino IDE, you need to configure the following:
+
+**For Arduino Mega 2560:**
+* **Keypad** library by Mark Stanley, Alexander Brevig. 
+  *(Install via Arduino IDE: Sketch > Include Library > Manage Libraries... search for "Keypad")*
+
+**For ESP32-S3:**
+* **esp32** Board Package by Espressif Systems.
+  *(Install via Arduino IDE: Tools > Board > Boards Manager... search for "esp32")*
+* *Note: The `WiFi.h`, `WebServer.h`, and `HardwareSerial.h` libraries are included automatically with the ESP32 core.*
 
 ## 🔌 Detailed Wiring Guide (Cable by Cable)
 
@@ -63,10 +75,11 @@ Place the keypad face up. The 8 pins at the bottom are usually ordered Left-to-R
   * Pin 8 (Col 4) ➔ Mega Pin 69 (Analog A15)
 
 ## 💻 Getting Started
-1. **Flash the Mega**: Open `Mega_2560/mega_script.ino` in the Arduino IDE and flash it to your Arduino Mega 2560. (Requires the `Keypad.h` library).
-2. **Flash the ESP32**: Open `ESP32_S3/esp32_script.ino` in the Arduino IDE and flash it to your ESP32-S3.
-3. **Connect**: Power both boards. The ESP32 will create a Wi-Fi Access Point named **PIANO_GS** (Password: `interstellar`).
-4. **Play**: Connect your phone or computer to the Wi-Fi network and navigate to `http://192.168.4.1` in your browser to open the dashboard.
+1. **Prepare Arduino IDE**: Ensure you have installed the required libraries and the ESP32 board package mentioned in the Software section.
+2. **Flash the Mega**: Open `Mega_2560/Mega_Piano.ino` and upload it to your Arduino Mega 2560.
+3. **Flash the ESP32**: Open `ESP32_S3/ESP32_Dashboard.ino` and upload it to your ESP32-S3.
+4. **Connect**: Power both boards. The ESP32 will create a Wi-Fi Access Point named **PIANO_GS** (Password: `interstellar`).
+5. **Play**: Connect your phone or computer to the Wi-Fi network and navigate to `http://192.168.4.1` in your browser to open the dashboard.
 
 ## 📂 Repository Structure
 * `/Mega_2560` - Contains the C++ logic for the Arduino Mega (Audio generation, keypad reading).
