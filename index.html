@@ -49,7 +49,7 @@
         .card h3 { margin-top: 0; }
         
         code { background: #000; padding: 2px 6px; border-radius: 4px; color: #aaffff; }
-        ul { padding-left: 20px; }
+        ul { padding-left: 20px; margin-top: 5px; }
         li { margin-bottom: 8px; }
         
         .wiring-grid {
@@ -111,6 +111,22 @@
                 <li>8x LEDs (Various colors recommended)</li>
                 <li>8x 220Ω Resistors (for LEDs)</li>
                 <li>Jumper wires and Breadboard</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Software & Libraries</h2>
+            <p>To compile the code in the Arduino IDE, ensure you have the following installed:</p>
+            
+            <h3>For Arduino Mega 2560:</h3>
+            <ul>
+                <li><strong>Keypad</strong> by Mark Stanley, Alexander Brevig (Install via <em>Sketch > Include Library > Manage Libraries</em>)</li>
+            </ul>
+
+            <h3>For ESP32-S3:</h3>
+            <ul>
+                <li><strong>esp32</strong> board package by Espressif Systems (Install via <em>Tools > Board > Boards Manager</em>)</li>
+                <li><code>WiFi.h</code>, <code>WebServer.h</code>, <code>HardwareSerial.h</code> (Included automatically with the ESP32 core, no manual installation needed)</li>
             </ul>
         </div>
 
