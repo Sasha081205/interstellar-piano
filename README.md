@@ -2,7 +2,7 @@
 
 A multi-microcontroller hardware synthesizer combining an **Arduino Mega 2560** and an **ESP32-S3**. It allows users to play notes, complex chords, and full pre-programmed melodies (including Hans Zimmer's *Cornfield Chase*) through both a physical keypad and a remote web dashboard.
 
-🌐 **[View the Project Portfolio Page](https://sasha081205.github.io/interstellar-piano/)** *(Remember to update this link)*
+🌐 **[View the Project Portfolio Page](https://sasha081205.github.io/interstellar-piano/)** 
 
 ## 🚀 Features
 * **Dual Interface**: Play via physical 4x4 matrix keypad or through the responsive HTTP dashboard.
@@ -63,8 +63,8 @@ Place the keypad face up. The 8 pins at the bottom are usually ordered Left-to-R
   * Pin 8 (Col 4) ➔ Mega Pin 69 (Analog A15)
 
 ## 💻 Getting Started
-1. **Flash the Mega**: Open `Mega_2560/Mega_Piano.ino` in the Arduino IDE and flash it to your Arduino Mega 2560. (Requires the `Keypad.h` library).
-2. **Flash the ESP32**: Open `ESP32_S3/ESP32_Dashboard.ino` in the Arduino IDE and flash it to your ESP32-S3.
+1. **Flash the Mega**: Open `Mega_2560/mega_script.ino` in the Arduino IDE and flash it to your Arduino Mega 2560. (Requires the `Keypad.h` library).
+2. **Flash the ESP32**: Open `ESP32_S3/esp32_script.ino` in the Arduino IDE and flash it to your ESP32-S3.
 3. **Connect**: Power both boards. The ESP32 will create a Wi-Fi Access Point named **PIANO_GS** (Password: `interstellar`).
 4. **Play**: Connect your phone or computer to the Wi-Fi network and navigate to `http://192.168.4.1` in your browser to open the dashboard.
 
