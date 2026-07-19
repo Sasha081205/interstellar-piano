@@ -2,7 +2,7 @@
 
 A multi-microcontroller hardware synthesizer combining an **Arduino Mega 2560** and an **ESP32-S3**. It allows users to play notes, complex chords, and full pre-programmed melodies (including Hans Zimmer's *Cornfield Chase*) through both a physical keypad and a remote web dashboard.
 
-🌐 **[View the Project Portfolio Page](https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPO_NAME/)**
+🌐 **[View the Project Portfolio Page](https://sasha081205.github.io/interstellar-piano/)**
 
 ## 🚀 Features
 * **Dual Interface**: Play via physical 4x4 matrix keypad or through the responsive HTTP dashboard.
