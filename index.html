@@ -115,26 +115,42 @@
         </div>
 
         <div class="section">
-            <h2>Wiring Guide</h2>
+            <h2>Detailed Wiring Guide</h2>
             
-            <h3>Microcontroller UART Connection</h3>
+            <h3>1. Power & Ground</h3>
+            <ul>
+                <li>Connect <strong>Mega GND</strong> to the breadboard Ground rail.</li>
+                <li>Connect <strong>ESP32 GND</strong> to the same breadboard Ground rail. <em>(Crucial for serial communication)</em></li>
+            </ul>
+
+            <h3>2. UART Communication</h3>
             <div class="wiring-grid">
                 <div><strong>Arduino Mega 2560</strong></div><div><strong>ESP32-S3</strong></div>
-                <div>TX1 (Pin 18)</div><div>RX (GPIO 16)</div>
+                <div>TX1 (Pin 18)</div><div>RX (GPIO 16) <em>*Use 5V to 3.3V step-down</em></div>
                 <div>RX1 (Pin 19)</div><div>TX (GPIO 5)</div>
-                <div>GND</div><div>GND <em>(Mandatory for common reference)</em></div>
             </div>
             
             <div class="alert">
-                <strong>Engineering Note:</strong> The Arduino Mega operates at 5V logic, while the ESP32 is a 3.3V device. While connecting them directly often works for prototyping, it is highly recommended to use a logic level converter or a simple voltage divider (using resistors) on the Mega TX -> ESP32 RX line to protect the ESP32 pins.
+                <strong>Engineering Note:</strong> The Arduino Mega operates at 5V logic, while the ESP32 is a 3.3V device. It is highly recommended to use a logic level converter or a voltage divider (e.g., 1kΩ and 2kΩ resistors) on the Mega TX -> ESP32 RX line to protect the ESP32 pins.
             </div>
 
-            <h3>Peripherals (Connected to Arduino Mega)</h3>
+            <h3>3. Audio (Passive Buzzer)</h3>
             <ul>
-                <li><strong>Buzzer:</strong> Pin 8 (Signal) & GND</li>
-                <li><strong>Keypad Rows (1-4):</strong> Pins 62, 63, 64, 65 (A8 to A11)</li>
-                <li><strong>Keypad Cols (1-4):</strong> Pins 66, 67, 68, 69 (A12 to A15)</li>
-                <li><strong>Note LEDs (via 220Ω resistors):</strong> Pins 22, 24, 26, 28, 30, 32, 34, 36</li>
+                <li><strong>Positive Pin (+):</strong> Connect to Mega Pin 8.</li>
+                <li><strong>Negative Pin (-):</strong> Connect to the shared Ground rail.</li>
+            </ul>
+
+            <h3>4. Visuals (8x LEDs)</h3>
+            <ul>
+                <li><strong>Anodes (+ long legs):</strong> Connect sequentially to Mega Pins 22, 24, 26, 28, 30, 32, 34, and 36.</li>
+                <li><strong>Cathodes (- short legs):</strong> Connect each to a 220Ω resistor, then to the shared Ground rail.</li>
+            </ul>
+
+            <h3>5. Input (4x4 Keypad)</h3>
+            <p>Assuming standard Left-to-Right pinout on the membrane connector:</p>
+            <ul>
+                <li><strong>Rows (1-4):</strong> Connect to Mega Pins 62 (A8), 63 (A9), 64 (A10), and 65 (A11).</li>
+                <li><strong>Columns (1-4):</strong> Connect to Mega Pins 66 (A12), 67 (A13), 68 (A14), and 69 (A15).</li>
             </ul>
         </div>
 
@@ -151,7 +167,8 @@
         <div class="section" style="text-align: center;">
             <h2>Source Code</h2>
             <p>The full C++ source code for both microcontrollers is available in this repository.</p>
-            <a href="https://github.com/Sasha081205/interstellar-piano" class="btn">View on GitHub</a>
+            <!-- REMEMBER TO REPLACE THIS LINK -->
+            <a href="https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME" class="btn">View on GitHub</a>
         </div>
     </div>
 
